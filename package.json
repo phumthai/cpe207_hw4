@@ -1,0 +1,16 @@
+{
+  "name": "package.jsom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "phumthai",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^11.13.0",
+    "nodemon": "^1.18.10"
+  }
+}

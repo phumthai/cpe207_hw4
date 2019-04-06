@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+    <body class="is-preload" onload="keep_data()">
+        <div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">MyProfile</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="gallery.html">Gallery</li>
+							<li><a href="contact.html">Contact</a></li>
+							<!-- <li><a href="elements.html">Elements</a></li> -->
+							<!--<li><a href="#" class="button primary">Sign Up</a></li>-->
+						</ul>
+					</nav>
+                </header>
+                <!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Phumthai Kaewkamkruea</h2>
+							<p>Computer Engineer Student<br />
+                            Chiang Mai University<br />
+                            phumthai@hotmail.com</p>
+						</header>
+                        <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+					</div>
+				</section>
+                <!-- Form -->
+					<section section id="one" class="spotlight style1 bottom">
+                        <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+						<div class="content">
+                            <div class="container">
+                                <h3>Contact</h3>
+                                <form method="post" action id="my-form">
+                                    <div class="row gtr-uniform gtr-50">
+                                        <div class="col-6 col-12-xsmall">
+                                            <input type="text" name="name" id="n" value="" placeholder="Name" />
+                                        </div>
+                                        <div class="col-6 col-12-xsmall">
+                                            <input type="email" name="email" id="email" value="" placeholder="Email" />
+                                        </div>
+                                        <div class="col-12">
+                                            <select name="category" id="category">
+                                                <option value="Category">- Category -</option>
+                                                <option value="Administration">Administration</option>
+                                                <option value="Program">Program</option>
+                                                <option value="Project">Project</option>
+                                                <option value="Game">Game</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4 col-12-medium">
+                                            <input type="radio" id="priority-low" name="priority" checked>
+                                            <label for="priority-low">Low Priority</label>
+                                        </div>
+                                        <div class="col-4 col-12-medium">
+                                            <input type="radio" id="priority-normal" name="priority">
+                                            <label for="priority-normal">Normal Priority</label>
+                                        </div>
+                                        <div class="col-4 col-12-medium">
+                                            <input type="radio" id="priority-high" name="priority">
+                                            <label for="priority-high">High Priority</label>
+                                        </div>
+                                        <div class="col-6 col-12-medium">
+                                            <input type="checkbox" id="copy" name="copy">
+                                            <label for="copy">Email me a copy of this message</label>
+                                        </div>
+                                        <div class="col-6 col-12-medium">
+                                            <input type="checkbox" id="human" name="human">
+                                            <label for="human">I am a human and not a robot</label>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                                        </div>
+                                        <div id="ck_subject"></div>
+                                        <div class="col-12">
+                                            <ul class="actions">
+                                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                                                <li><input type="reset" value="Reset" /></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- show data -->
+                    <section id="show_data"></section>
+            <!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+        </div>
+        <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script src="datacontact.js"></script>
+            
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDgO-6VqfVHJGKnCPwH3nGTOJCcwt0GYN8",
+                authDomain: "testdata-e57a1.firebaseapp.com",
+                databaseURL: "https://testdata-e57a1.firebaseio.com",
+                projectId: "testdata-e57a1",
+                storageBucket: "testdata-e57a1.appspot.com",
+                messagingSenderId: "709173374129"
+            };
+            firebase.initializeApp(config);
+        </script>
+    </body>
+</html>
